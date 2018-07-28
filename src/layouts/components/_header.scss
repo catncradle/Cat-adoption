@@ -1,0 +1,28 @@
+.header {
+  /* here we're saying we want this class to have a 95% view height, the background image to be a gradient of green, with a color behind it */
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.315),
+      rgba($color-primary-dark, 0.329)
+    ),
+    url(../img/DSC01905.jpg);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+
+  &-logoContainer {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
+
+  &-textBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    text-align: center;
+    /* text-align  button is an a tag so it counts as text, so the purpose of this text-align is to center the text */
+  }
+}
