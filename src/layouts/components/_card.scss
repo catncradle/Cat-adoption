@@ -1,0 +1,56 @@
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem;
+  //I had to set the height of both parent and child because when we take an element out of the flow we lose styling
+  // what's happening here is that a side is transformed, and two subclasses are on either side of each other
+  &-side {
+    background-color: orangered;
+    color: white;
+    height: 50rem;
+    transition: all 0.7s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+
+    &-front {
+      background-color: $color-white;
+    }
+
+    &-back {
+      transform: rotateY(180deg);
+      //in order to do a linear-gradient you need a background image.
+      &-1 {
+        background-image: linear-gradient(
+          to right bottom,
+          $color-secondary-light,
+          $color-secondary-dark
+        );
+      }
+    }
+  }
+
+  &:hover &-side-front {
+    transform: rotateY(-180deg);
+  }
+  &:hover &-side-back {
+    transform: rotateY(0deg);
+  }
+
+  // styling the frontside
+  &-picture {
+    background-size: cover;
+    height: 23rem;
+    &-1 {
+    }
+    &-2 {
+    }
+    &-3 {
+    }
+  }
+}
