@@ -13,7 +13,7 @@ const Header = () => (
         <span className="headingPrimary-Main">Mewow</span>
         <span className="headingPrimary-Second">Adopt don't shop</span>
       </h1>
-      <a href="#" className="btn">
+      <a href="#" className="btn btn-white">
         Click to find out why life is so hard for our cats lol
       </a>
     </div>
