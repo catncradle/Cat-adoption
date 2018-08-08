@@ -1,12 +1,14 @@
 .header {
   /* here we're saying we want this class to have a 95% view height, the background image to be a gradient of green, with a color behind it */
   height: 95vh;
+
   background-image: linear-gradient(
       to right bottom,
       rgba($color-primary-light, 0.315),
       rgba($color-primary-dark, 0.329)
     ),
     url(../img/DSC01905.jpg);
+  background-attachment: fixed;
   background-size: cover;
   background-position: top;
   position: relative;
