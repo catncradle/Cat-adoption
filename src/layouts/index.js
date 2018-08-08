@@ -7,6 +7,7 @@ import Main from '../components/main';
 import Features from '../components/features';
 import Tours from '../components/tours';
 import HappyCats from '../components/happycats';
+import AdoptionForm from '../components/adoptionForm';
 // import Grid from '../components/grid';
 import './index.scss';
 
@@ -25,6 +26,7 @@ const Layout = ({ children, data }) => (
     <Features />
     <Tours />
     <HappyCats />
+    <AdoptionForm />
     {/* <div>{children()}</div> */}
   </div>
 );
