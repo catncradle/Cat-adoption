@@ -13,7 +13,7 @@ const adoptionForm = () => (
             <div className="form-group">
               <input
                 type="text"
-                className="input-form"
+                className="form-input"
                 placeholder="Full Name"
                 id="name"
                 required
@@ -26,14 +26,42 @@ const adoptionForm = () => (
             <div className="form-group">
               <input
                 type="email"
-                className="input-form"
+                className="form-input"
                 placeholder="Email address"
                 id="email"
                 required
               />
               <label htmlFor="email" className="form-label">
-                Full Name
+                Email address
               </label>
+            </div>
+
+            <div className="form-radio-group">
+              <input
+                type="radio"
+                className="form-radio-input"
+                id="small"
+                name="size"
+              />
+              <label htmlFor="small" className="form-radio-label">
+                <span className="form-radio-button" />
+                Small Cats
+              </label>
+            </div>
+
+            <div className="form-radio-group">
+              <div className="form-radio-group">
+                <input
+                  type="radio"
+                  className="form-radio-input"
+                  id="large"
+                  name="size"
+                />
+                <label htmlFor="large" className="form-radio-label">
+                  <span className="form-radio-button" />
+                  Large Cats
+                </label>
+              </div>
             </div>
           </form>
         </div>

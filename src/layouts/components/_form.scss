@@ -1,0 +1,82 @@
+.form {
+  &-group {
+  }
+
+  &-input {
+    font-size: 1.5rem;
+    font-family: inhert;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border-radius: 2px;
+    background-color: rgba($color-white, 0.5);
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 80%;
+    display: block;
+    transition: all 0.3s;
+    &::-webkit-input-placeholder {
+      color: $color-grey-dark-2;
+    }
+    // outline is set to none, but we set a borderbottom to a color so the know what is clicked
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rbga($color-black, 0.1);
+      border-bottom: 3px solid $color-primary;
+    }
+    // different default color for invalid
+    &:focus:invalid {
+      border-bottom: 3px solid $color-secondary-dark;
+    }
+  }
+
+  &-label {
+    font-size: 1.2rem;
+    font-weight: 7000;
+    margin-left: 2rem;
+    margin-top: 0.7rem;
+    // we have to do display block because above we have block styling and we want to use it for positioning
+    display: block;
+    transition: all 0.3s;
+  }
+
+  // when the placeholder is shown, sibling selector the direct sibling is hidden, and opacity is zero because opacity has to be animated
+  &-input:placeholder-shown + &-label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+  }
+
+  // styling for the radiogroup
+  &-radio-group {
+    width: 49%;
+    display: inline-block;
+  }
+  &-radio-label {
+    // font-size: $default-font-size;
+    cursor: pointer;
+    position: relative;
+    padding-left: 1rem;
+  }
+  &-radio-button {
+    height: 3rem;
+    width: 3rem;
+    border: 5px solid $color-primary;
+    border-radius: 50%;
+    display: inline-block;
+    // remember for styling with block styles, make the display:block
+    position: absolute;
+    left: 0;
+    right: 0;
+    &::after {
+      content: '';
+      display: block;
+      height: 1rem;
+      width: 1rem;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $color-primary;
+    }
+  }
+}
